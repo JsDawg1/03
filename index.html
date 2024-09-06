@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="container">
+     <p id="contact">Contact Us</p>
+      <div class="name">
+        <div class="first">
+          <p>First Name</p>
+          <input type="text" id="fname">
+          <p id="enterVal">This field is required</p>
+        
+        </div>
+        <div class="last">
+          <p>Last name</p>
+          <input type="text" id="lname">
+          <p id="enterVal">This field is required</p>
+        </div>
+      </div>
+
+      <div class="email">
+        <p>Email Address *</p>
+        <input type="email" id="mail">
+        <p id="enterVal">Please enter a valid email address</p>
+      </div>
+
+     
+      <div class="query" id="labelquery">
+        <p class="queryP">Query Type *</p>
+        <div class="queryContainer">
+        <div class="qu" id="gl">
+          <input type="radio" id="general" name="checkB1" value="1">
+          <p>General Enquiry</p>
+        </div>
+        <div class="qu" id="sup">
+          <input type="radio" id="support" name="checkB2" value="2">
+          <p>Support Request</p>
+        </div>
+         
+        </div>
+        <p id="enterVal">This field is required</p>   
+      </div>
+
+      <div class="message">
+        <p>Message *</p>
+        <input type="text" id="Message"> 
+        <p>This field is required</p>
+      </div>
+
+      <div class="check">
+        <div class="checkContainer">
+        <input type="checkbox" id="checkBox">
+        <p>I consent to being contacted by the team*</p>
+        </div>
+        <p id="enterVal" >To submit the form, plese consent to being contacted</p>
+      </div>
+
+      <button id="submit">Submit</button>
+
+    </div>
+    <script src="srcipt.js"></script>
+</body>
+</html>

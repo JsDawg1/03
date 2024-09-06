@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+.container{
+    height: 100%;
+    width: 70vw;;
+    background-color:aquamarine;
+    
+} 
+.name{
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+.email{
+   margin-left: 11vw;
+}
+
+.qu{
+    display: flex;
+}
+.qu>p{
+    margin-right: 5vw;
+}
+
+.queryContainer{
+    display: flex;
+     justify-content: space-around;
+} 
+
+.queryContainer>div{
+    border:1px solid black;
+    border-radius: 5px;
+    margin-left: 11w;
+}
+
+.errorQuery{
+    margin-left: 11vw;
+}
+
+
+.queryP{
+    margin-left:11vw;
+    margin-top: 3vh;
+}
+
+.message{
+    margin-left: 11vw;
+}
+
+#Message{
+    height:100px;
+    width:80%;
+}
+
+.checkContainer{
+    display: flex;
+   
+    margin-left: 11vw;
+}
+
+.check p{
+    margin-left: 4vw;
+}
+
+#submit{
+    width: 80%;
+    height:40px;
+    margin-left: 11vw;
+    margin-bottom: 5vh;
+}
+
+#contact{
+    margin-left: 11vw;
+    font-size: 40px;
+}
+
+#enterVal{
+    margin-left: 11vw;
+    display: none;
+    color:red;
+    margin-bottom: 3vh;
+}
+ 
