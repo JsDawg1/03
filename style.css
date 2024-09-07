@@ -19,48 +19,35 @@ body{
     display: flex;
     justify-content: space-around;
     
-
 }
 .email{
    margin-left: 11vw;
 }
 
-.qu{
+.general, .support{
     display: flex;
-}
-.qu>p{
-    margin-right: 5vw;
+    justify-content: space-around;
 }
 
-.queryContainer{
+.radios{
     display: flex;
-     justify-content: space-around;
-} 
-
-.queryContainer>div{
-    border:1px solid black;
-    border-radius: 5px;
-    margin-left: 11w;
+    justify-content: space-around;
 }
 
 .errorQuery{
     margin-left: 11vw;
 }
 
-
-.queryP{
-    margin-left:11vw;
-    margin-top: 3vh;
+.query>p.error, p.top{
+        margin-left: 11vw;
+        margin-top: 2vh;
 }
+
 
 .message{
     margin-left: 11vw;
 }
 
-#Message{
-    height:100px;
-    width:80%;
-}
 
 .checkContainer{
     display: flex;
@@ -68,9 +55,7 @@ body{
     margin-left: 11vw;
 }
 
-.check p{
-    margin-left: 4vw;
-}
+ 
 
 #submit{
     width: 80%;
@@ -78,16 +63,10 @@ body{
     margin-left: 11vw;
     margin-bottom: 5vh;
 }
-
-#contact{
+.check>p.error{
     margin-left: 11vw;
-    font-size: 40px;
 }
 
-#enterVal{
-    margin-left: 11vw;
+.error{
     display: none;
-    color:red;
-    margin-bottom: 3vh;
 }
- 
