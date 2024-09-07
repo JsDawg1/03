@@ -1,42 +1,109 @@
-const container = document.querySelector(".container")
-const fName = document.querySelector("#fname")
-const lName = document.querySelector("#lname");
-const mail = document.querySelector("#mail")
-const gen = document.querySelector("#general")
-const sup = document.querySelector("#support")
-const msg = document.querySelector("#Message")
-const check = document.querySelector("#checkBox")
-const submit = document.querySelector("#submit");
-const error1 = document.querySelector("#enterVal")
- 
- 
-submit.addEventListener("click", submitForm);
+ const fname = document.querySelector("#Fninput");
+const lname = document.querySelector("#lninput");
+const mail = document.querySelector("#mail");
+const msg = document.querySelector("#msg");
+const check = document.querySelector("#checkBox");
+const btn = document.querySelector("#submit");
 
-function submitForm(){
-    if(checkAll()){
-        console.log("form submitted");
-        error1.style.cssText = "display: none"
-         
+
+btn.addEventListener("click", main);
+ 
+
+
+function checkInputs(){
+    var result = false;
+    var radio1 = document.querySelector("#gen-radio");
+    var radio2 = document.querySelector("#support-radio");
+    var errorMsg = document.querySelector(".query>p.error");
+    radio1.addEventListener("click", (event)=>{
+        radio1.checked = true;
+    })
+    radio2.addEventListener("click", (event)=>{
+        radio2.checked=true;
+    })
+    if(radio1.checked||radio2.checked){
+        errorMsg.style.display = '';
+        result = true;
     }
     else{
-        error1.style.cssText = "display: block"
-     }
+        errorMsg.style.display = "block";
+        errorMsg.style.color = "red";
+    }
     
+    
+    var errorMsg1 = document.querySelector("#fName > p.error");
+    var errorMsg2 = document.querySelector("#lName > p.error");
+
+    if(fname.value===""){
+        errorMsg1.style.display = "block";
+        errorMsg1.style.color = "red";
+    }
+    else{
+        errorMsg1.style.display = '';
+        result = true;
+    }
+
+    if(lname.value===""){
+        errorMsg2.style.display = "block";
+        errorMsg2.style.color = "red";
+    }
+    else{
+        errorMsg2.style.display = '';
+        result = true;
+    }
+
+
+    
+  
+    var errorMsg = document.querySelector(".email>p.error")
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if(emailRegex.test(mail.value) && mail.value!==""){
+        errorMsg.style.display = '';
+        result = true;
+    }
+    else{
+        errorMsg.style.display = "block";
+        errorMsg.style.color = "red";
+    }
+    
+ 
+    var errorMsg = document.querySelector(".message>p.error") ;
+    if(msg.value === ""){
+        errorMsg.style.display = "block";
+        errorMsg.style.color = "red";
+    }
+    else{
+        errorMsg.style.display = '';
+        result = true;
+    } 
+
+
+    var errorMsg = document.querySelector(".check>p.error") ;
+    check.addEventListener("click", (event)=>{{
+        check.checked = true;
+    }})
+
+    if(check.checked){
+        errorMsg.style.display = '';
+        result = true;
+    }
+    else{
+        errorMsg.style.display = "block";
+        errorMsg.style.color = "red";
+    }
+    return result;
 }
-function checkAll() {
-     
-    let condition = false;    // This will return true if all conditions are met
-    let radioCheck = false;   // Used to ensure at least one radio button is selected
 
-    // Check if at least one radio button is selected
-    if (gen.checked === true || sup.checked === true) {
-        radioCheck = true;
+
+
+
+
+function main(){
+    
+    if(checkInputs()){
+        console.log("We did it mate once again")
     }
-
-    // Ensure all required fields are filled and conditions are met
-    if (fName.value !== "" && lName.value !== "" && mail.value !== "" && msg.value !== "" && radioCheck) {
-        condition = true;
+    else{
+        console.log("Hi")
     }
-
-    return condition;
 }
