@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,47 +10,51 @@
 <body>
     <div class="container">
      <p id="contact">Contact Us</p>
-      <div class="name">
-        <div class="first">
-          <p>First Name</p>
-          <input type="text" id="fname">
-          <p id="enterVal">This field is required</p>
-        
+      
+     <div class="nameContainer">
+        <ul class="name">
+            <li id="fName">
+              <p>First Name<span id="star">*</span></p>
+              <input type="text" id="Fninput">
+              <p class="error">This is required</p>
+            </li>
+            
+            <li id="lName">
+              <p>Last Name<span id="star">*</span></p>
+              <input type="text" id="lninput">
+              <p class="error">This is required</p>
+            </li>
+        </ul>
         </div>
-        <div class="last">
-          <p>Last name</p>
-          <input type="text" id="lname">
-          <p id="enterVal">This field is required</p>
-        </div>
-      </div>
+   
 
       <div class="email">
-        <p>Email Address *</p>
+        <p>Email Address<span id="star">*</span></p>
         <input type="email" id="mail">
-        <p id="enterVal">Please enter a valid email address</p>
+        <p class="error">Please enter vaild mail</p>
       </div>
 
      
-      <div class="query" id="labelquery">
-        <p class="queryP">Query Type *</p>
-        <div class="queryContainer">
-        <div class="qu" id="gl">
-          <input type="radio" id="general" name="checkB1" value="1">
-          <p>General Enquiry</p>
+      <div class="query">
+        <p class="top">Query Type<spam id="star">*</spam></p>
+        <div class="radios">
+          <div class="general">
+            <input type="radio" id="gen-radio">
+            <p>General Enquiry</p>
+          </div>
+
+          <div class="support">
+              <input type="radio" id="support-radio">
+              <p>Support Request</p>
+          </div>
         </div>
-        <div class="qu" id="sup">
-          <input type="radio" id="support" name="checkB2" value="2">
-          <p>Support Request</p>
-        </div>
-         
-        </div>
-        <p id="enterVal">This field is required</p>   
+        <p class="error">This field is required</p>
       </div>
 
       <div class="message">
         <p>Message *</p>
-        <input type="text" id="Message"> 
-        <p>This field is required</p>
+        <textarea name="msg" id="msg" rows="8" cols="80"></textarea>
+        <p class="error">This field is required</p>
       </div>
 
       <div class="check">
@@ -57,12 +62,12 @@
         <input type="checkbox" id="checkBox">
         <p>I consent to being contacted by the team*</p>
         </div>
-        <p id="enterVal" >To submit the form, plese consent to being contacted</p>
+        <p class="error" >To submit the form, plese consent to being contacted</p>
       </div>
 
       <button id="submit">Submit</button>
-
     </div>
-    <script src="srcipt.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
